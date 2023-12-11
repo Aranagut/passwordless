@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .welcome-msg {
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+        .welcome-msg {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="welcome-msg centered" style="width: 100%;">
+    <div style="width: 100%;"> 
+        <div style="width: 90%;float: left;text-align: right;"><span class="username"  >{{ username }}</span>
+            <div style="width: 90%;float: left;text-align: right;"></div><span class="d-name">(User)</span>
+        </div>
+        <div style="width: 10%; float: left;"><button type="button" class="btn btn-primary logout" style="float: right;" (click)="logOut()">LogOut</button></div>
+    </div>
+    <div style="width:100%;">
+        
+        <div >
+           <div ><h1 class="head">Login Success</h1></div>
+           <div>
+           </div>
+           <div><button type="button" class="btn btn-primary mr-20" (click)="register()">Register Passkey</button>
+            <span class="button-space"></span>
+            <button type="button" class="btn btn-primary" (click)="unpairDevice()">Unpair Device</button></div>
+           <div>
+           </div>
+        <div>
+            <h2>Simpler. Safer. Smarter.</h2><br>
+        <p class="content-text">Passkeys are unique crypographic keys stored on a user's device for secure and convenient authentication.</p>
+
+        </div>
+    </div>
+     
+</div>
+</div>
+</body>

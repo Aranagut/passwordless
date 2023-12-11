@@ -1,0 +1,245 @@
+.welcome-msg {
+    /* text-align: center;
+    color: white;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    overflow: hidden; */
+
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.centered {
+    text-align: center;
+    /* position: absolute;
+    top: 150px; */
+    margin: 100px 50px 0px 50px;
+    color: black;
+}
+/* 
+.right-down {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+} */
+
+.btn-primary {
+    background-color: #f95a1f;
+    border-color: transparent;
+    color: white;
+    font-weight: bold;
+    padding: 20px 20px;
+    font-size: 20px;
+    border-radius: 13px 13px;
+   
+}
+
+/* .btn-primay:hover {
+    color: #fff;
+    background-color: green;
+} */
+
+.btn-align-bottom {
+    margin-top: 10px;
+    position: relative;
+}
+
+.btn-danger {
+    background-color: rgb(250, 71, 71);
+    border-color: rgb(250, 71, 71);
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    font-size: 20px;
+}
+
+.mr-40 {
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+/* .background-img {
+    width: 600%;
+    height: 600%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.main-section {
+    overflow: hidden;
+    color: white;
+}
+
+.text-align {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.btn-align {
+    top: 20px;
+    position: absolute;
+    left: 70px;
+}
+
+.h1{
+    margin-bottom: 10px;
+}
+
+.m4-60 {
+    margin-right: 60px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* .mt-40 {
+    margin-top: 40px;
+} */
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: white;
+    background-color: black;
+    border: 50px;
+}
+
+.background {
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.877); /* Semi-transparent white background for content */
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    max-width: 200%;
+    max-height: 70%;
+    position: absolute;
+    z-index: 1;
+    top: 18%;
+    left: 70%;
+    text-align: center;
+}
+.logout{
+width: 150px;
+background-color: #5a5555;
+float: right;
+}
+
+.ml-20{
+    margin-left: 40px;
+}
+
+.mb-80 {
+    margin: 600px;
+}
+
+.unpair-btn{
+    background-color: #f95a1f;
+    color: white;
+    border-color: transparent;
+    font-weight: bold;
+    padding: 20px 20px;
+    font-size: 20px;
+    border-radius: 13px 13px;
+    margin-left: 20px;
+   
+}
+
+.head{
+    font-size: 3.5rem;
+    margin: 0px;
+    position: relative;
+    left: 9px;
+}
+
+.content-text{
+    font-size: medium;
+    left: 18px;
+    position: relative;
+    left: 25px;
+}
+
+.s-text{
+    margin: -160px;
+    position: relative;
+    left: 15px;
+}
+
+.h2{
+    left: 20px;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+.welcome-msg {
+    text-align: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+  
+.username {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.d-name{
+    color: lightgray;
+    margin-right: 2%;
+}
+
+.button-space{
+    display: inline-block;
+    width: 20px;
+}
+
+.mr-20{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+}

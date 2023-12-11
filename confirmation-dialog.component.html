@@ -1,0 +1,171 @@
+<div *ngIf="type === 'Register'">
+    <div class="modal-header">
+        <h4 class="modal-title">Login Successful !</h4>
+        <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <b>Do you want to register your device for passwordless- authentication?</b>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger mr-30" (click)="decline()">Not Now</button>
+        <button type="button" class="btn btn-primary" (click)="accept()">Register</button>
+    </div>
+</div>
+<div *ngIf="type === 'OTPValidate'">
+    <div class="modal-header b-none align-center">
+        <h4 class="modal-title"><b>SECURE MFA AUTHENTICATION</b></h4>
+        <!-- <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button> -->
+    </div>
+
+    <div class="modal-body b-radius">
+        <div class="fw-500"><b>OTP (One Time Password) Verfication</b></div>
+        <p class="mt-30"><b>{{message}}</b></p>
+            <div class="enterotp"><b>Verification Code:</b></div>
+            <form name="otpform" autocomplete="off">
+            <input class="otp" name="otpfield" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="enteredOtp"/>
+            <i class="far fa-eye password-toggle-icon" (click)="togglePasswordVisibility()"></i>
+            <p *ngIf="!isValidOtp" class="cl-red">Please enter valid OTP</p>
+        </form>
+        <!-- </div> -->
+    <!-- <div class="otpContent" [ngClass]="{'wrong-otp': isValidOtp == false}">
+            <input type="text" class="digit-box" *ngFor="let el of digits; let i = index" [(ngModel)]="otpObj[i]"
+                autofocus="{{i == 0}}" maxlength="i" (keydown)="handleKeyDown($event, i)" 
+                name="otpInputField">
+            <p *ngIf="!isValidOtp" class="cl-red">Please enter valid OTP</p>
+        </div> -->
+    <div class="modal-footer b-none btn-align">
+        <button type="button" class="btn btn-danger mr-30 b-radius" (click)="resendOTP()">Resend Code</button>
+        <button type="button" class="btn btn-primary mr-30 b-radius" (click)="validateOTP()">Submit</button>
+        <button type="button" class="btn btn-cancel mr-30 b-radius" (click)="dismiss()">Cancel</button>
+    </div>
+</div>
+</div>
+<div *ngIf="type === 'SuccessfulRegistartion'">
+    <div class="modal-header title">
+        <h4 class="modal-title rs-border">Registration Successful!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <b>Click OK to continue to landing page</b>
+    </div>
+    <div class="modal-footer btn-align">
+        <button type="button" class="btn btn-primary" (click)="accept()">OK</button>
+    </div>
+</div>
+<div *ngIf="type === 'alreadyRegistered'">
+    <div class="modal-header">
+        <h4 class="modal-title">Request Unsuccessful!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <b>You have already registered for FIDO</b>
+    </div>
+    <div class="modal-footer btn-align">
+        <button type="button" class="btn btn-primary" (click)="navigateToLandingpage()">OK</button>
+    </div>
+</div>
+<div *ngIf="type === 'savePasskey'">
+    <div class="modal-header b-none justify-content">
+        <h4 class="modal-title">Save a passkey</h4>
+    </div>
+    <div class="modal-body">
+        <img class="img" src="assets/images/FIDO-Passkey_Icon.jpg" alt="" width="340px" height="150px">
+        <!-- <div class="mid-center mt-5"> -->
+        <!-- <div class="fw-500"><b>OTP (One Time Password) Verfication</b></div> -->
+        <div class="text">
+            <p>Sign in to your account easily and securely with a passkey.<br>Note: Your biometric data is only stored
+                on your devices and will never be shared with anyone.</p>
+            <!-- </div> -->
+        </div>
+        <div class="modal-footer b-none btn-align">
+            <button type="button" class="btn btn-danger mr-30" (click)="decline()">Skip</button>
+            <button type="button" class="btn btn-primary" (click)="accept()">Save a Passkey</button>
+        </div>
+    </div>
+</div>
+<!-- <div *ngIf="type === 'deviceName'">
+        <div class="modal-header b-none justify-content">
+            <h4 class="modal-title">Edit Your Device Name</h4>
+        </div>
+        <div class="modal-body">
+            <div class="name">
+                <p>Please enter a name of the device registered to your account.</p>
+                <div class="input-align">
+                <input type="text" class="form-control w-350" [formControl]="deviceName" type="text" id="deviceName" />
+                </div>
+            </div>
+            <div class="modal-footer b-none btn-align">
+                <button type="button" class="btn btn-primary" (click)="addPasskeyName()">Save Device Name</button>
+                <button type="button" class="btn btn-danger mr-30" (click)="decline()">Skip</button>
+            </div>
+        </div>
+    </div> -->
+
+
+<div *ngIf="type === 'errorMessageDialogue'">
+    <div class="modal-header">
+        <h4 class="modal-title"></h4>
+        <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <b>{{message}}</b>
+    </div>
+    <div class="modal-footer btn-align">
+        <button type="button" class="btn btn-primary" (click)="dismiss()">OK</button>
+    </div>
+</div>
+
+<div *ngIf="type === 'unpairDevice'">
+    <div class="modal-header b-none justify-content">
+        <h4 class="modal-title">Unpair Device</h4>
+    </div>
+    <div class="modal-body">
+        <div class="t-text">
+            <p>Are you sure do you want to unpair your device?</p>
+        </div>
+        <div class="modal-footer b-none btn-align">
+            <button type="button" class="btn btn-danger mr-30" (click)="decline()">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="accept()">Unpair</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="type === 'SuccessFullUnpaired'">
+    <div class="modal-header b-none justify-content">
+        <h4 class="modal-title">{{title}}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="t-text">
+            <p>{{message}}</p>
+        </div>
+        <div class="modal-footer b-none btn-align">
+            <button type="button" class="btn btn-primary" (click)="accept()">OK</button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="type === 'logoutDialouge'">
+    <div class="modal-header b-none justify-content">
+        <h4 class="modal-title">{{title}}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="modal-title">
+            <p>{{message}}</p>
+        </div>
+        <div class="modal-footer b-none btn-align">
+            <button type="button" class="btn btn-primary" (click)="accept()">Logout</button>
+            <button type="button" class="btn btn-cancel " (click)="dismiss()">Cancel</button>
+        </div>
+    </div>
+</div> 

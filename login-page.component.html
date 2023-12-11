@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/59784df54a.js" crossorigin="anonymous"></script>
+    <title>CIAM MFA page</title>
+</head>
+<div class="container">
+    <div class="row">
+        <div class="left-column">
+            <h1 class="text-c align-w">What is a passkey?</h1><br>
+            <div class="p-align">
+                <p class="w-500">A passkey is a new way to sign in that works completely without passwords. By using the
+                    security capabilities of your devices like Touch ID and Face ID, passkeys are way more secure and
+                    easier to use than both passwords and all current 2-factor authentication (2FA) methods.</p>
+            </div>
+        </div>
+        <div class="right-column">
+            <form name="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <!-- <body>
+                            <form name="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                <div class="container"> -->
+
+                <!-- <div class="header-container">
+                <h1 class="github-head">
+                    Welcome to Passwordless Log in
+                </h1>
+            </div> -->
+                <!-- <div class="container"> -->
+                <div class="login-wrapper">
+                    <div class="github-logo">
+                        <!--  <i class="fa-brands fa-github"></i> -->
+                        <img class="img" src="assets/images/bluepasskey.jpg" alt="">
+                    </div>
+                    <div class="input-box">
+                        <div class="input-label">Username</div>
+                        <input type="text" required formControlName="userName" type="text" id="userName"
+                            (click)="showSuggestions()" (blur)="disableSuggestions()" autocomplete="username webauthn">
+                    </div>
+                    <div class="alert-c">
+                        <span *ngIf="submitted && loginForm.get('userName')?.hasError('required')" class="alert-c">
+                            <sup>*</sup> User Name/Email is required!
+                        </span>
+                    </div>
+
+                    <div class="input-box p-relative">
+                        <div class="input-label">
+                            <span>Password</span>
+                        </div>
+                        <div class="pwd_visible">
+                            <input type="password" formControlName="password" type="password" id="password" required>
+                            <i class="far fa-eye password-toggle-icon" (click)="togglePasswordVisibility()"></i>
+                        </div>
+                    </div>
+                    <div *ngIf="!isValidUser">
+                        <p class="text-red">Please enter valid credentials!!</p>
+                    </div>
+                    <div class="alert-c">
+                        <span *ngIf="submitted && loginForm.get('password')?.hasError('required')" class="alert-c">
+                            <sup>*</sup> Please enter password
+                        </span>
+                    </div>
+                    <div class="mt-40">
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </div>
+                    <div class="divider d-flex align-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0 justify-content text-muted">or
+                        </p>
+                    </div>
+                    <div class="mt-40">
+                        <button class="btn btn-primary" type="button" (click)="loginwithPasskey()">Log in with
+                            passkey</button>
+                        <!-- <button class="btn btn-primary" type="button" (click)="loginwithPasskey()">Log in with
+                            passkey</button> -->
+                    </div>
+                </div>
+
+                <!-- </div> -->
+
+                <!-- </div>
+                            </form> -->
+                <!-- </body> -->
+
+                <!-- </html> -->

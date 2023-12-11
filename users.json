@@ -1,0 +1,173 @@
+{
+	"users": [
+		{
+			"username": "Ritik",
+			"password": "123456",
+			"deviceType": "SMS",
+			"email": "ritik.raj@fiserv.com",
+			"mobileNo": "+919680261719",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Raj",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "ritik.raj@fiserv.com",
+			"mobileNo": "+919680261719",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Venky",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "venkatesh.parthasarathy@fiserv.com",
+			"mobileNo": "+919028685976",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Anuj",
+			"password": "123456",
+			"deviceType": "SMS",
+			"email": "anujkumar.pandey@fiserv.com",
+			"mobileNo": "+919962560466",
+			"state": "DISABLE"
+		},
+		{
+			"username": "Prasad",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "prasad.pokharkar@fiserv.com",
+			"mobileNo": "+918867608061",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Ajinkya",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "Ajinkya.pokharkar@fiserv.com",
+			"mobileNo": "+919028685976",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Anand",
+			"password": "123456",
+			"deviceType": "SMS",
+			"email": "Anand.pokharkar@fiserv.com",
+			"mobileNo": "+919028685976",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Praveen",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "prasad.pokharkar@fiserv.com",
+			"mobileNo": "+919028685976",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Ranga",
+			"password": "123456",
+			"deviceType": "TOTP",
+			"email": "prasad.pokharkar@fiserv.com",
+			"deviceName": "Iphone14",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "Teju",
+			"password": "123456",
+			"deviceType": "SMS",
+			"email": "tejaswini.aranagu@fiserv.com",
+			"mobileNo": "+19403314552",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "jason",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "Jason.Wang2@Fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "ravan",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "ravan.nagalla@fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "praveen",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "Praveen.Palagiri@Fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "raj",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "rajgopal.panchapkesan1@Fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "harsh",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "harsh.parihar@fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "seema",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "seema.mittal@fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "srini",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "sriniveditha.madana@fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "sankara",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "sankararao.vanapalli@fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "lesch",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "celeste.lesch@fiserv.com",
+			"mobileNo": "+9177777777",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "shashi",
+			"password": "123456",
+			"deviceType": "SMS",
+			"email": "shashikant.kumar@fiserv.com",
+			"mobileNo": "+919199007684",
+			"state": "ACTIVE"
+		},
+		{
+			"username": "aditya",
+			"password": "123456",
+			"deviceType": "EMAIL",
+			"email": "aditya.hridyam@fiserv.com",
+			"mobileNo": "+918788823494",
+			"state": "ACTIVE"
+		}
+	]
+}
