@@ -1,0 +1,25 @@
+stages:
+  - build-source-code-passwordless
+
+variables:
+  MVN_IMG: "fmk-prod.nexus-ci.onefiserv.net/fmk/java/openjdk-17-maven:FMK-04-25-23"
+  NODE_IMG: "fmk.nexus.onefiserv.net/apm/0008109/temporary-node-maven17:TEMPORARY-06-08-23"
+
+build-source-code-passwordless:
+  stage: build-source-code-passwordless
+  image: $NODE_IMG
+  services:
+    - name: $NODE_IMG
+      alias: mvn
+  script:
+    - mvn -f /builds/na/corp/gcss/ciam-2_0-api/passwordless/ciam-mfa-sample-proj/pom.xml clean install --settings /builds/na/corp/gcss/ciam-2_0-api/passwordless/settings.xml
+    - mkdir -p output
+    - find . -name *.war
+    - cp ./ciam-mfa-sample-proj/target/ciam-fido2.war output/
+    - ls -lR output/
+    - mvn -f /builds/na/corp/gcss/ciam-2_0-api/passwordless/ciam-mfa-sample-proj/pom.xml clean deploy --settings /builds/na/corp/gcss/ciam-2_0-api/passwordless/settings.xml
+  artifacts:
+    paths:
+      - output/
+  only:
+    - main

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+   
+  <servers>
+    <server>
+      <id>gitlab-maven</id>
+      <configuration>
+        <httpHeaders>
+          <property>
+            <name>Job-Token</name>
+            <value>${env.CI_JOB_TOKEN}</value>
+          </property>
+        </httpHeaders>
+      </configuration>
+    </server>
+    <server>
+      <id>nexus-ci.onefiserv.net</id>
+      <username>svc-ping-cicd-dev</username>
+      <password>F_an_QRb2qj%!m8H76TdU_1M7</password>
+    </server>
+    <server>
+      <id>maven-releases</id>
+      <username>svc-ping-cicd-dev</username>
+      <password>F_an_QRb2qj%!m8H76TdU_1M7</password>
+    </server>
+    <server>
+      <id>nexus-new-public</id>
+      <username>svc-ping-cicd-dev</username>
+      <password>F_an_QRb2qj%!m8H76TdU_1M7</password>
+    </server>
+    <server>
+      <id>public</id>
+      <username>svc-ping-cicd-dev</username>
+      <password>F_an_QRb2qj%!m8H76TdU_1M7</password>
+    </server> 
+    <server>
+	      <id>deploy_nexus_server</id>
+  	    <username>YilPMk_7</username>
+	      <password>vOJJpRDz3j9ZYBFvombkoudBDouYvDKY_y5JteI6kMkK</password>
+    </server> 
+  </servers>
+  <mirrors>
+    <mirror>
+      <id>nexus-new-central</id>
+      <mirrorOf>central</mirrorOf>
+      <name>Nexus Proxy central</name>
+      <url>https://nexus-ci.onefiserv.net/repository/Maven_Central/</url>
+      <!-- <url>https://nexus.onefiserv.net/repository/Maven_Central/</url> -->
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>remote-repository</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://nexus-ci.onefiserv.net/repository/Maven_Central/</url>
+          <!-- <url>https://nexus.onefiserv.net/repository/Maven_Central/</url> -->
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+</settings>
